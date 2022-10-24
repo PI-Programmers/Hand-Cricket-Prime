@@ -1,5 +1,6 @@
 import random
 k=0
+lt3=['bl','bt']
 w=int(input("Enter number of wickets for the game."))
 if w<1:
       print("Invalid, try again.")
@@ -25,7 +26,6 @@ if ht2>=1 or ht2<=6:
             k=1
 #toss winner is determined
 if k==0:
-    lt3=["bt","bl"]
     t3=random.choice(lt3)
     if t3=="bt":
         print("Computer wins and chooses to bat first.")
@@ -33,15 +33,17 @@ if k==0:
         runs=0
         while i!=w:
             cbt=random.choice(lt2)
-            hbl=int(input("Throw a number"))
+            hbl=int(input("Throw a number: "))
             if hbl<1 or hbl>6:
                 print("Invalid")
             else:
                 if cbt==hbl:
+                    print("The computer throws a",cbt)
                     print("Out!")
                     i+=1
                     print("wickets remaining = ", (w-i))
                 else:
+                    print("The computer throws a",cbt)
                     runs+=cbt
                     print("runs made is = ", runs)
         else:
@@ -59,10 +61,12 @@ if k==0:
                 print("Invalid")
             else:
                 if cbl==hbt:
+                    print("The computer throws a",cbl)
                     print("Out!")
                     ih+=1
                     print("wickets remaining = ", (w-ih))
                 else:
+                    print("The computer throws a",cbl)
                     runsh+=hbt
                     print("runs made is = ",runsh)
             if runsh>runs:
@@ -85,10 +89,12 @@ if k==0:
                 print("Invalid")
             else:
                 if cbl==hbt:
+                    print("The computer throws a",cbl)
                     print("Out!")
                     ih+=1
                     print("wickets remaining = ", (w-ih))
                 else:
+                    print("The computer throws a",cbl)
                     runsh+=hbt
                     print("runs made is = ",runsh)
         else:
@@ -101,15 +107,17 @@ if k==0:
         runs=0
         while i!=w:
             cbt=random.choice(lt2)
-            hbl=int(input("Throw a number"))
+            hbl=int(input("Throw a number: "))
             if hbl<1 or hbl>6:
                 print("Invalid")
             else:
                 if cbt==hbl:
+                    print("The computer throws a",cbt)
                     print("Out!")
                     i+=1
                     print("wickets remaining = ", (w-i))
                 else:
+                    print("The computer throws a",cbt)
                     runs+=cbt
                     print("runs made is = ", runs)
             if runs>runsh:
@@ -120,7 +128,7 @@ if k==0:
 #If Human wins the toss
 else:
     print("You won the toss.")
-    ht3=input("Enter bt for batting and bl for balling")
+    ht3=input("Enter bt for batting and bl for balling: ")
     if ht3 not in lt3:
         print("Invalid input.")
     else:
@@ -130,15 +138,17 @@ else:
             runsh=0
             while ih!=w:
                 cbl=random.choice(lt2)
-                hbt=int(input("Throw a number."))
+                hbt=int(input("Throw a number: "))
                 if hbt<1 or hbt>6:
                     print("Invalid")
                 else:
                     if cbl==hbt:
+                        print("The computer throws a",cbl)
                         print("Out!")
                         ih+=1
                         print("wickets remaining = ", (w-ih))
                     else:
+                        print("The computer throws a",cbl)
                         runsh+=hbt
                         print("runs made is = ",runsh)
             else:
@@ -151,15 +161,17 @@ else:
                 runs=0
                 while i!=w:
                     cbt=random.choice(lt2)
-                    hbl=int(input("Throw a number"))
+                    hbl=int(input("Throw a number: "))
                     if hbl<1 or hbl>6:
                         print("Invalid")
                     else:
                         if cbt==hbl:
+                            print("The computer throws a",cbt)
                             print("Out!")
                             i+=1
                             print("wickets remaining = ", (w-i))
                         else:
+                            print("The computer throws a",cbt)
                             runs+=cbt
                             print("runs made is = ", runs)
                     if runs>runsh:
@@ -173,11 +185,12 @@ else:
             runs=0
             while i!=w:
                 cbt=random.choice(lt2)
-                hbl=int(input("Throw a number"))
+                hbl=int(input("Throw a number: "))
                 if hbl<1 or hbl>6:
                     print("Invalid")
                 else:
                     if cbt==hbl:
+                        print("The computer throws a",cbt)
                         print("Out!")
                         i+=1
                         print("wickets remaining = ", (w-i))
@@ -194,15 +207,17 @@ else:
                 runsh=0
                 while ih!=w:
                     cbl=random.choice(lt2)
-                    hbt=int(input("Throw a number."))
+                    hbt=int(input("Throw a number: "))
                     if hbt<1 or hbt>6:
                         print("Invalid")
                     else:
                         if cbl==hbt:
+                            print("The computer throws a",cbl)
                             print("Out!")
                             ih+=1
                             print("wickets remaining = ", (w-ih))
                         else:
+                            print("The computer throws a",cbl)
                             runsh+=hbt
                             print("runs made is = ",runsh)
                     if runsh>runs:
